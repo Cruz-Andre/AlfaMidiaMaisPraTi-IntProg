@@ -1,0 +1,75 @@
+<html>
+<head>
+<script>
+    let n1 = 1;
+    let n2 = 0;
+
+    while(n1 != 0)
+    {
+        n1 = parseFloat(prompt('Digite um número '));
+        let operador = prompt("escolha entre: Adição ( + ), Subtração ( - ), Multiplicação ( * ), Divisão ( / ) ou Exponenciação ( ** )");
+
+        switch(operador) {
+            case "+":
+                n2 = n2 + n1;
+                alert('Resultado da Soma = ' + n2);
+                break;
+            case "-":
+                n2 = n2 - n1;
+		        alert('Resultado da Subtração = ' + n2);
+                break;
+            case "/":
+                n2 = n2 / n1;
+		        alert('Resultado da Divisão = ' + n2);
+                break;
+            case "*":
+                n2 = n2 * n1;
+		        alert('Resultado da Multiplicação = ' + n2);
+                break;
+            case "**":
+                n2 = n2 ** n1;
+		        alert('Resultado da Exponenciação = ' + n2);
+                break;
+        }
+/*
+	    if (operador == "+")
+    {
+        n2 = n2 + n1;
+        alert('Resultado da Soma = ' + n2);
+	} 
+        else if (operador == "-")
+        {
+            n2 = n2 - n1;
+		    alert('Resultado da Subtração = ' + n2);
+	    } 
+        
+        else if (operador == "/") 
+        {
+            n2 = n2 / n1;
+		    alert('Resultado da Divisão = ' + n2);
+	    } 
+        
+        else if (operador == "*")
+        {
+            n2 = n2 * n1;
+		    alert('Resultado da Multiplicação = ' + n2);
+	    } 
+        
+        else if (operador == "**")
+        {
+            n2 = n2 ** n1;
+		    alert('Resultado da Exponenciação = ' + n2);
+	    }
+        */
+    }
+    
+</script>
+
+<style>
+	h1 {text-align: center;}
+</style>
+</head>
+<body>
+	<h1>Mini Calculadora infinita em html/javascript</h1>
+</body>
+</html>

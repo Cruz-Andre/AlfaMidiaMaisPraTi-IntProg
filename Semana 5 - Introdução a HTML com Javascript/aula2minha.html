@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Este é o título
+  </title>
+
+  <script>
+    function ler() {
+      let texto = prompt("Entre com um texto");
+      document.getElementById("caixatxt").value = texto;
+    }
+
+    function escrever() {
+      let texto = document.getElementById("caixatxt").value;
+      alert("Você digitou no Formulário: " + texto);
+    }
+  </script>
+
+</head>
+<body>
+  <h1 id="h1Principal">Ler e Escrever num campo de Formulário</h1>
+    <input id="caixatxt" type="text" name="nome" value="">        
+    <br><br><button onclick="ler()">Ler</button>
+    <br><br><button onclick="escrever()">Escrever</button>
+</body>
+</html>

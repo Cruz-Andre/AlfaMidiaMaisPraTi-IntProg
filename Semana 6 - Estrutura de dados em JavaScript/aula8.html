@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Aula 8 - Comandos every, some e filter-->
+		<script>
+			/*
+			function funcao(valor) {
+				return ((valor % 2) == 0);
+			}
+
+			function funcao2(valor) {
+				return valor > 0;
+			}
+
+			let array1 = [1, 2, 3, 4, 5];
+			let array2 = array1.filter(funcao);
+			console.log(array1);
+			console.log(array2);
+			
+			let resultado = array1.every(funcao2);
+			let resultado2 = array1.some(funcao2);
+			console.log(resultado);
+			console.log(resultado2);
+			*/
+		
+			function funcao(valor) {
+				return ((valor % 2) == 0);
+			}
+			
+			function testa(valor) {
+				return valor > 2;
+			}
+			
+			let array1 = [2,4,6];
+			console.log(array1);
+			let resultado = array1.some(testa);
+			console.log(resultado);
+		
+		//construa a mesma operação acima, usando for
+			for (let i = 0; i < array1.length; i++) {
+				console.log(array1[i]);
+				console.log(array1.some(testa));
+				
+		}
+
+		</script>
+	</head>
+	<body>
+		<h1 style="text-align:center;">Aula 8 - Comandos every, some e filter</h1>
+	</body>
+</html>

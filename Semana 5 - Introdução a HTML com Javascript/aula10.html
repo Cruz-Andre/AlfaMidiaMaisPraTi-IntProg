@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<script>
+
+	let totalCadastros = 0;
+	let nomes = [];
+	let emails = [];
+
+
+	function criarCadastro() {
+		let nome = document.getElementById('nome').value;
+		let email = document.getElementById('email').value;
+		nomes[totalCadastros] = nome;
+		emails[totalCadastros] = email;
+		document.getElementById("usuarios").innerHTML += "<p onclick='exibir(" + totalCadastros	+ ")'>" + nome;
+
+		totalCadastros++;
+	}
+
+	function exibir(indice) {
+		document.getElementById("cadastro").innerHTML = "Nome:" + nomes[indice] + "<BR>E-mail:" + emails[indice];
+	}
+
+</script>
+
+<body>
+
+		Nome: <input id=nome>
+		<br><br>
+		E-mail: <input id=email>
+		<br><br>
+		<button onclick="criarCadastro()">Criar cadastro</button>
+
+		<br><br>Usuários
+		<p id=usuarios></p>
+
+
+		<br><br>Cadastro
+		<p id=cadastro></p>
+</body>
+
+</html>

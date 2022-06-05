@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Aula 7 - Comando map-->
+		<script>
+
+			function funcao(valor) {
+				console.log(valor);
+				let pontoNovo = valor;
+				pontoNovo.y = pontoNovo.y + pontoNovo.x
+				return pontoNovo;
+			}
+
+			let array1 = [
+				{x:1, y:1},
+				{x:2, y:1},
+				{x:3, y:1}
+			];
+			let array2 = array1.map(funcao);
+			console.log(array2);
+
+
+		/*
+		function funcao(valor) {
+			let pontoNovo = valor;
+			pontoNovo.y = pontoNovo.y + pontoNovo.x;
+			return pontoNovo;
+		}
+
+		let array1 = [{x:1,y:1},
+						{x:2,y:1},
+						{x:3,y:1},];
+		let array2 = array1.map(funcao);
+		console.log(array2);
+		*/
+
+		</script>
+	</head>
+	<body>
+		<h1 style="text-align:center;">Aula 7 - Comando map</h1>
+	</body>
+</html>

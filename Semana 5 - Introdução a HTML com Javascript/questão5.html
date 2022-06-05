@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Questão 5
+  </title>
+
+  <script>
+    let i = 1;
+    let j = (i>1)?2:3;
+    let k = (j>2)?3:4;
+    document.getElementById("id1").innerHTML = i;
+    document.getElementById("id1").innerHTML += j;
+    document.getElementById("id1").innerHTML += k;
+  </script>
+
+</head>
+<body>
+    <input id="idP1">
+    <h1>Questão 5/5</h1>
+    <p>Observe o código a seguir:</p>
+    <code>
+      let i = 1;<br>
+      let j = (i>1)?2:3;<br>
+      let k = (j>2)?3:4;<br>
+      document.getElementById("id1").innerHTML = i;<br>
+      document.getElementById("id1").innerHTML += j;<br>
+      document.getElementById("id1").innerHTML += k;
+        </code>
+    <p>Assumindo que originalmente o elemento id1 tinha, como innerHTML, a string "0", será exibido dentro do elemento:</p>
+     <p>0123</p>
+     <p>123</p>
+     <p>134</p>
+     <p><strong>133</strong></p>
+     <p>8</p>
+</body>
+</html>

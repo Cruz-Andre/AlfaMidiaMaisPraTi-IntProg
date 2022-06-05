@@ -1,0 +1,68 @@
+<html>
+<head>
+<script>
+	//let n1 = parseFloat(prompt('Digite um número '));
+    //let n2 = parseFloat(prompt('Digite outro número '));
+    //let operador = prompt("escolha entre: Adição ( + ), Subtração ( - ), Multiplicação ( * ), Divisão ( / ) ou Exponenciação ( ** )");
+
+	if (operador == "+")
+    {
+        let soma = n1 + n2;
+        alert('Resultado da Soma = ' + soma);
+	} 
+        else if (operador == "-")
+        {
+            let subtracao = n1 - n2;
+		    alert('Resultado da Subtração = ' + subtracao);
+	    } 
+        
+        else if (operador == "/") 
+        {
+            let divisao = n1 / n2;
+		    alert('Resultado da Divisão = ' + divisao);
+	    } 
+        
+        else if (operador == "*")
+        {
+            let multiplicacao = n1 * n2;
+		    alert('Resultado da Multiplicação = ' + multiplicacao);
+	    } 
+        
+        else if (operador == "**")
+        {
+            let exponenciacao = n1 ** n2;
+		    alert('Resultado da Exponenciação = ' + exponenciacao);
+	    }
+</script>
+
+<style>
+	h1 {text-align: center;}
+</style>
+</head>
+<body>
+	<h1>Mini Calculadora em html/javascript</h1>
+    <table>
+        <tbody>
+            <tr>
+                <th><input type="button" id="7" value="7" name="7"></th>
+                <th><input type="button" id="8" value="8" name="8"></th>
+                <th><input type="button" id="9" value="9" name="9"></th>
+            </tr>
+            <tr>
+                <th><input type="button" id="4" value="4" name="4"></th>
+                <th><input type="button" id="5" value="5" name="5"></th>
+                <th><input type="button" id="6" value="6" name="6"></th>
+            </tr>
+            <tr>
+                <th><input type="button" id="1" value="1" name="1"></th>
+                <th><input type="button" id="2" value="2" name="2"></th>
+                <th><input type="button" id="3" value="3" name="3"></th>
+            </tr>
+            <tr>
+                <th><input type="button" id="0" value="0" name="0"></th>
+                <th><input type="button" id="," value="," name=","></th>
+            </tr>
+        </tbody>
+      </table>
+</body>
+</html>

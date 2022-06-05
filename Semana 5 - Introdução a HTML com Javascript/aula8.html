@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<script>
+
+	let nomeUsuarios = [];
+	let emailUsuarios = [];
+	let enderecoUsuarios = [];
+	let whatsappUsuarios = [];
+
+	function exibir(indice) {
+		document.getElementById("idNome").innerHTML = nomeUsuarios[indice];
+		document.getElementById("idEmail").innerHTML = emailUsuarios[indice];
+		document.getElementById("idEndereco").innerHTML = enderecoUsuarios[indice];
+		document.getElementById("idWhatsapp").innerHTML = whatsappUsuarios[indice];
+	}
+
+
+	function redesenha() {
+		lista = "";
+
+		for( let i = 0 ; i < nomeUsuarios.length; i++ ) {
+			lista += "<p onclick='exibir("+ i +")'>" + nomeUsuarios[i] + "</p><BR>";
+		}
+		document.getElementById("lista").innerHTML = lista;
+	}
+
+	function criarCadastro() {
+		let nome = document.getElementById("nome").value;
+		let email = document.getElementById("email").value;
+		let endereco = document.getElementById("endereco").value;
+		let whatsapp = document.getElementById("whatsapp").value;
+
+		let i = nomeUsuarios.length;
+		nomeUsuarios[i] = nome;
+		emailUsuarios[i] = email;
+		enderecoUsuarios[i] = endereco;
+		whatsappUsuarios[i] = whatsapp;
+
+		redesenha();
+		
+	}
+</script>
+
+<body>
+		<br>Nome: <input id="nome">
+		<br><br>E-mail: <input id="email">
+		<br><br>Endereço: <input id="endereco">
+		<br><br>WhatsApp: <input id="whatsapp">
+
+		<br><br>
+		<button onclick="criarCadastro()">Criar Cadastro</button>
+
+		<br><br>
+		<b>Usuários:</b>
+		<br>
+		<p id="lista"></p>
+
+
+		<BR><BR>
+		Cadastro
+		<p id="idNome"></p>
+		<p id="idEmail"></p>
+		<p id="idEndereco"></p>
+		<p id="idWhatsapp"></p>
+</body>
+
+</html>

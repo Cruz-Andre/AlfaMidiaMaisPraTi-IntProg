@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Questão 4
+  </title>
+
+  <script>
+    let i = 0;
+    document.getElementById("idP1").innerHTML = "";
+    while( i < 3) {
+      document.getElementById("idP1").innerHTML += "<p onclick='alert(" + i + ")'>" + i + "</p>";
+      i++;
+    }
+    document.getElementById("idP1").innerHTML += "<p onclick='alert(" + ( i+1) + ")'>" + i + "</p>";
+  </script>
+
+</head>
+<body>
+    <input id="idP1">
+    <h1>Questão 4/5</h1>
+    <p>Observando o código abaixo, que escreve em um elemento com id igual a idP1,</p>
+    <code>
+        let i = 0;<br>
+        document.getElementById("idP1").innerHTML = "";<br>
+        while( i < 3) {<br>
+            document.getElementById("idP1").innerHTML += "&ltp onclick='alert(" + i + ")'>" + i + "&lt/p>";<br>
+            i++;<br>
+        }<br>
+        document.getElementById("idP1").innerHTML += "&ltp onclick='alert(" + ( i+1) + ")'>" + i + "&lt/p>";
+        </code>
+    <p>O que vai acontecer se o usuário clicar no número "3" dentro do elemento com id = idP1?</p>
+     <p><strong>Não existe o número "3" na listagem gerada</strong></p>
+     <p>será exibido no alerta "3"</p>
+     <p><strong>será exibido no alerta "4"</strong></p>
+     <p>será exibido no alerta "1234"</p>
+     <p>será exibido no alerta "31"</p>
+</body>
+</html>

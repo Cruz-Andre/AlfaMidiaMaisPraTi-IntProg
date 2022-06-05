@@ -1,0 +1,7 @@
+
++ Editores para código usados nas aulas:
+
+    VSCODE    : https://code.visualstudio.com/
+	
+	NOTEPAD++ : https://notepad-plus-plus.org/downloads/
+	

@@ -1,0 +1,123 @@
+<script>
+
+//EXERCICIO PROPOSTO 7
+    // Entrada: 1 nome da pessoa e 2 valores numéricos
+    // Processamento: Cálculo Troco 
+    //                Manuel é dono de uma fruteira, ele recebe o nome do comprador 
+    //                , recebe o valor em dinheiro e calcula o troco. 
+    //                Ex.: Se Manuel recebesse uma nota de 200 Reais 
+    //                e vendesse um produto que custa 15 Reais.
+    //                como seria composto o troco desta venda:
+    //                0 x R$ 200.00
+    //                1 x R$ 100
+    //                1 x R$ 50
+    //                1 x R$ 20
+    //                1 x R$ 10
+    //                1 x R$ 5
+    //                0 x R$ 1
+    //                0 x R$ 0.50
+    //                0 x R$ 0.25
+    //                0 x R$ 0.10
+    //                0 x R$ 0.05
+    //                0 x R$ 0.01
+    //
+    // Saída: Nome digitado seguido do resultado do troco
+    //   Ex.: Fulano  
+    //                0 x R$ 200.00
+    //                1 x R$ 100.00
+    //                1 x R$ 50.00
+    //                1 x R$ 20.00
+    //                1 x R$ 10.00
+    //                1 x R$ 5.00
+    //                0 x R$ 1.00
+    //                0 x R$ 0.50
+    //                0 x R$ 0.25
+    //                0 x R$ 0.10
+    //                0 x R$ 0.05
+    //                0 x R$ 0.01  
+    //         ----------------------- 
+    //            TROCO = R$ 185.00   
+
+    //Solução do E.P. 07
+        //entrada de dados
+        console.log("EXERCICIO PROPOSTO 7");
+        var nome  = prompt("Digite o Nome do Cliente ");
+        var vprod = prompt("Digite o valor do produto");
+        var vdinh = prompt("Digite o valor em dinheiro recebido do Cliente");
+
+        //tratamento dos dados numéricos
+        vprod = Number(vprod);
+        vdinh = Number(vdinh);
+
+        //processamento
+        var troco = vdinh - vprod;
+        
+        var dn200 = (troco / 200);
+        var tn200 = (dn200 > 0)?  parseInt(dn200) : 0; 
+        var rn200 = (troco % 200);
+
+        var dn100 = (rn200 / 100);
+        var tn100 = (dn100 > 0 )? parseInt(dn100) : 0;
+        var rn100 = (rn200 % 100);
+
+        var dn50 = (rn100 / 50); // 1
+        var tn50 = (dn50 > 0 )? parseInt(dn50) : 0;
+        var rn50 = (rn100 % 50);  
+
+        var dn20 = (rn50 / 20);
+        var tn20 = (dn20 > 0)?  parseInt(dn20) : 0; 
+        var rn20 = (rn50 % 20);
+
+        var dn10 = (rn20 / 10);
+        var tn10 = (dn10 > 0)?  parseInt(dn10) : 0; 
+        var rn10 = (rn20 % 10);
+
+        var dn5 = (rn10 / 5);
+        var tn5 = (dn5 > 0)?  parseInt(dn5) : 0; 
+        var rn5 = (rn10 % 5);
+
+        var dn1 = (rn5 / 1);
+        var tn1 = (dn1 > 0)?  parseInt(dn1) : 0; 
+        var rn1 = (rn5 % 1);
+
+        //..centavos, lembrar de usar .toFixed(2)
+        var dn050 = (rn1 / 0.5);
+        var tn050 = (dn050 > 0)?  parseInt(dn050) : 0; 
+        var rn050 = (rn1.toFixed(2) % 0.5);
+
+        var dn025 = (rn050 / 0.25);
+        var tn025 = (dn025 > 0)?  parseInt(dn025) : 0; 
+        var rn025 = (rn050.toFixed(2) % 0.25);
+
+        var dn010 = (rn025 / 0.10);
+        var tn010 = (dn010 > 0)?  parseInt(dn010) : 0; 
+        var rn010 = (rn025.toFixed(2) % 0.10);
+
+        var dn005 = (rn010 / 0.05);
+        var tn005 = (dn005 > 0)?  parseInt(dn005) : 0; 
+        var rn005 = (rn010.toFixed(2) % 0.05);
+
+        var dn001 = (rn005 / 0.01);
+        var tn001 = (dn001 > 0)?  parseInt(dn001) : 0; 
+        var rn001 = (rn005.toFixed(2) % 0.01);
+
+        //saida de dados
+        console.log("Nome: ", nome);
+        console.log("  Valor do Produto          : ", vprod);
+        console.log("  Valor recebido em Dinheiro: ", vdinh);
+        console.log("---------------------------------------");
+        console.log(tn200 + " x R$ 200,00 ");
+        console.log(tn100 + " x R$ 100,00 ");
+        console.log(tn50  + " x R$ 50,00 ");
+        console.log(tn20  + " x R$ 20,00 ");
+        console.log(tn10  + " x R$ 10,00 ");
+        console.log(tn5   + " x R$ 5,00 ");
+        console.log(tn1   + " x R$ 1,00 ");
+        console.log(tn050 + " x R$ 0,50 ");
+        console.log(tn025   + " x R$ 0,25 ");
+        console.log(tn010   + " x R$ 0,10 ");
+        console.log(tn005   + " x R$ 0,05 ");
+        console.log(tn001   + " x R$ 0,01 ");
+        console.log("---------------------------------------");
+        console.log(" Troco = " , troco.toFixed(2));
+    </script>

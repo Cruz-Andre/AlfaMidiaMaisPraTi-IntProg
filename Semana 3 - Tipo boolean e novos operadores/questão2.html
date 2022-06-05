@@ -1,0 +1,18 @@
+<script>
+
+let v1 = 2
+let v2 = ++v1;
+let v3 = v1++;
+let v4 = v2 + 2*v3;
+v1 += v2 + v3 + v4;
+
+/*
+1ª interação v1=2
+2ª interação v2=3 pq v1=2 + 1 do incremento a esquerda o v2=3 e o v1=3
+3ª interação v3=3 pq v1=3 não soma + 1 do incremento pois ele está na direita. mas soma no v1=3 + 1 -> v1=4
+v1 agora é 4 v1=4
+4ª interação v4=9 pq v2=3 e v3 é 2 vezes 3 pq v3=3. 3+2*3=9
+5ª interação v1=v1+v2+v3+v4 -> v1=4+3+3+9=19
+*/
+
+</script>

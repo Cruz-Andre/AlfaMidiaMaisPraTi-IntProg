@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<!--Aula 10 - Desafio de arrays-->
+	<head>
+		<script>
+		let array1 = [1,2,3,4];
+		// Incluir o número 5 no final do array => 1,2,3,4,5
+		array1.push(5);
+		console.log(array1);
+
+		// Incluir o número 6 no inicio do array => 6,1,2,3,4,5
+		array1.unshift(6);
+		console.log(array1);
+
+		// Criar um novo array, apenas com os número divisiveis por 3 => 6,3
+		let array2 = [];
+		for (let i = 0; i < array1.length; i++){
+			if(array1[i] % 3 == 0) {
+				array2.push(array1[i]);
+				
+			}
+		}
+		console.log(array2);
+		
+		// Multiplicar por 3 todos os elementos do array2 => 18,9
+		let array3 = [];
+		for (let i = 0; i < array2.length; i++) {
+			array3.push(array2[i] * 3);
+		}
+		console.log(array3);
+
+		// Multiplicar por 3 todos os elementos do array2 usando MAP => 18,9
+		array3 = array2.map(function(array2) {
+			return array2 * 3;
+		});
+		console.log(array3);
+
+		// Multiplicar por 3 todos os elementos do array2 usando MAP2 => 18,9
+		function multp3 (array2) {
+			return array2 * 3;
+		}
+		array3 = array2.map(multp3);
+		console.log(array3);
+		
+		// Multiplicar todos os elementos do array, um a um. => 162
+		function reducao(par1,par2) {
+			return par1 * par2;
+		}
+		let resultado2 = array3.reduce(reducao);
+		console.log(resultado2);
+
+
+		</script>
+	</head>
+	<body>
+		<h1 style="text-align:center;">Aula 10 - Desafio de arrays</h1>
+	</body>
+</html>

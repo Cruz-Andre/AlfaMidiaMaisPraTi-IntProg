@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Questão 3
+  </title>
+
+  <script>
+    x = parseInt(document.getElementById("v1").innerHTML);
+    y = parseInt(document.getElementById("v2").innerHTML);
+    if ( (x > 5) || (y > 5) )
+        x += y;
+        alert(x + y);
+  </script>
+
+</head>
+<body>
+    <h1>Questão 3/5</h1>
+    <p>Assumindo uma página html com o seguinte código:</p>
+    <code>
+        x = parseInt(document.getElementById("v1").innerHTML);<br>
+        y = parseInt(document.getElementById("v2").innerHTML);<br>
+        if ( (x > 5) || (y > 5) )<br>
+            x += y;<br>
+            alert(x + y);
+        </code>
+    <p id="v1">10</p>
+    <p id="v2">20</p>
+    <p>O resultado da execução deste código, assumindo uma página html compatível com o código mostrado, será:</p>
+     <p>NaN</p>
+     <p>1020</p>
+     <p>30</p>
+     <p><strong>50</strong></p>
+     <p>30+20</p>
+</body>
+</html>

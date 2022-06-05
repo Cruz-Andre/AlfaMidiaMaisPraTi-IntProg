@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            var d = 100; // Numero decimal.
+            var ab = []; // Armazena num array o resultado da divisão e o resto da divisão.
+            var y = 0; // Variável auxiliar para receber o resultado da divisão e o resto da divisão.
+            while(d >= 1)
+            {
+                ab[y] = parseInt(d) % 2;
+                y++;
+                d = parseInt(d) / 2;
+            }
+            ab.reverse();
+            console.log(ab);
+            alert(ab);
+
+        </script>
+    </head>
+</html>

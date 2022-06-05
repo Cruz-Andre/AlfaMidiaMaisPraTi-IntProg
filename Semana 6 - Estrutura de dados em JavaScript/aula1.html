@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Escopo de variáveis com let e var-->
+    <script>
+      
+      var v1 = 10;
+      if(true) {
+        let v1 = 20;
+        console.log("var v1 dentro do if: " + v1);
+      }
+      console.log("var v1 fora do if: " + v1);
+
+      /*
+      let v1 = 10;
+      if(true) {
+        let v1 = 20;
+        console.log("var v1 dentro do if: " + v1);
+      }
+      console.log("var v1 fora do if: " + v1);
+      */
+
+      /*
+      var v1 = 10;
+      if(true) {
+        var v1 = 20;
+        console.log("var v1 dentro do if: " + v1);
+      }
+      console.log("var v1 fora do if: " + v1);
+      */
+
+      /*
+      if(true) {
+        var v1 = 20;
+        console.log("var v1 dentro do if: " + v1);
+      }
+      console.log("var v1 fora do if: " + v1);      
+      */
+
+      /*
+      var v1 = 10;
+      function teste() {
+        var v1 = 20;
+        console.log("var de v1 Dentro da função teste: " + v1);
+      }
+      teste();
+      console.log("var de v1 Fora da função teste: " + v1);
+      */
+
+
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Escopo de variáveis com let e var</h1>
+  </body>
+</html>

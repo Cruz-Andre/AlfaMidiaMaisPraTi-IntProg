@@ -1,0 +1,29 @@
+<!doctype html>  
+<html>
+<head>
+	<meta charset="UTF-8">  
+	<script>
+		function ler() {
+			let texto = prompt("entre com um texto");
+			document.getElementById("idTexto").value = texto;
+		}
+
+		function escrever() {
+			let texto = document.getElementById("idTexto").value;
+			alert("O texto que você digitou foi: " + texto);
+		}
+
+			
+			
+	</script>
+</head>
+<body>
+	
+	<input id="idTexto">
+	<br><button onclick="ler()">Ler</button>
+	<br><button onclick="escrever()">Escrever</button>
+
+
+
+</body>
+</html>

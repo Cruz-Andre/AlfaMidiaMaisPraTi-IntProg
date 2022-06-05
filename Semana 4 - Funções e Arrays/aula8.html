@@ -1,0 +1,28 @@
+<script>
+	let a = [[11,12],[21,22],[31,32],[41,42]];
+	let i = 0;
+	// Com while
+	while (i < a.length) {
+		let j = 0;
+		while ( j < a[i].length) {
+			alert("posição (" + i + "," + j + ") = " + a[i][j]);
+			console.log(a[i][j]);
+			j++;
+		}
+		i++;	
+	}
+
+	// Ou com for
+
+	for (i = 0; i < a.length; i++) {
+		let j = 0;
+		for (j = 0; j < a[i].length; j++) {
+			alert("posição (" + i + "," + j + ") = " + a[i][j]);
+			console.log(a[i][j]);
+		}
+	}
+
+	
+
+
+</script>

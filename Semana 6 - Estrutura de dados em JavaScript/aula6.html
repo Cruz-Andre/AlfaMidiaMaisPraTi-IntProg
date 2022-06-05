@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Aula 6 - Desafio com arrays e objetos-->
+    <script>
+
+        let estrutura = [
+			[{x:1, y:12}, {x:10,y:20}, {x:3, y:10}],
+			[{x:14, y:12}, {x:1,y:10}],
+			[{x:15, y:17}]
+		];
+
+        /* percorrer o array com For */
+        console.log("percorrendo o array com loop For")
+        for (let i = 0; i < estrutura.length; i++) {
+			for (let j = 0; j <estrutura[i].length; j++) {
+				console.log(estrutura[i][j].x + "," + estrutura[i][j].y);
+			}
+			console.log("----------------");
+		}
+
+/* percorrer o array com ForEach com a "função do lado de fora do ForEach" */
+		console.log("percorrendo o array com ForEach com a 'função do lado de fora do ForEach'");
+		function array1 (valor) {
+			valor.forEach(array2);
+			function array2 (item) {
+				console.log(item.x + "," + item.y);
+			}
+			console.log("----------------");
+		}
+		estrutura.forEach(array1);
+
+/* percorrer o array com ForEach com a "função dentro do ForEach" */
+		console.log("percorrendo o array com ForEach com a função dentro do ForEach")
+		estrutura.forEach( function(valor) {
+			valor.forEach( function(item){
+				console.log(item.x + "," + item.y);
+			});
+			console.log("----------------");
+		});	
+        
+
+        /* percorrer o array com For Of */
+        console.log("percorrendo o array com For Of")
+        for (let dentroarray of estrutura) {
+			for (estrutura of dentroarray) {
+				console.log(estrutura.x + "," + estrutura.y);
+			}
+          console.log("----------------");
+        }
+        
+        /*
+        -------------------
+        1,12
+        10,20
+        3,10
+        -------------------
+        14,12
+        1,10
+        -------------------
+        15,17
+        */
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Aula 6 - Desafio com arrays e objetos</h1>
+  </body>
+</html>

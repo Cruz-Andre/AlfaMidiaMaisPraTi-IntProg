@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+	//let peso = 63.5; // Peso em kg. Observe o uso de "." para fração
+	//let altura = 1.77; // Altura em metros, também como fração.
+	let nome = prompt("Digite seu Nome");
+
+	var peso = (prompt('Digite seu Peso. Use a virgula ( , ) como separador'));
+	peso = parseFloat(peso.replace(",","."));
+	// console.log(peso, typeof(peso));
+	
+	var altura = (prompt('Digite sua Altura. Use a virgula ( , ) como separador'));
+	altura = parseFloat(altura.replace(",","."));
+	// console.log(altura, typeof(peso));
+
+	let imc = peso / altura ** 2; // Cálculo do IMC -> peso dividido pela altura ao quadrado.
+	// console.log(imc, typeof(imc));
+	alert(nome + '. Seu indice de massa corporal: ' + imc.toFixed(2).replace(".",","));
+
+	if (imc < 18.50) {
+		alert('Magreza - Obesidade Grau 0 (zero)');
+	} else if (imc >= 18.50 && imc <= 24.99) {
+		alert('Normal - Obesidade Grau 0 (zero)');
+	} else if (imc >= 25.00 && imc <= 29.99) {
+		alert('Sobrepeso - Obesidade Grau I (um)');
+	} else if (imc >= 30.00 && imc <= 39.99) {
+		alert('Obesidade - Obesidade Grau II (dois)');
+	} else {
+		alert('Obesidade Grave - Obesidade Grau III (três)')
+	}
+</script>
+
+<style>
+	h1 {text-align: center;}
+</style>
+</head>
+<body>
+	<h1>Uso da tag script e condição IF para cálculo do IMC. Usando HTML</h1>
+</body>
+</html>

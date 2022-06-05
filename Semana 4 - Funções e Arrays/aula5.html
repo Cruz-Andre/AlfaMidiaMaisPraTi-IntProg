@@ -1,0 +1,16 @@
+<script>
+
+function fazMuitaCoisa(z) {
+	let i = 0; // essa variavel i só existe dentro da função
+	while (i < z) {
+		console.log(i++);
+	}
+}
+
+let i = 0; // essa variavel i existe globalmente
+	while (i < 3) {
+		fazMuitaCoisa(6);
+		i++;
+	}
+
+</script>

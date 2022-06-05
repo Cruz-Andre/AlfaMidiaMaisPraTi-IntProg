@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Aula 4 - O forEach-->
+    <script>
+      function funcaoUsadaNoForEach(valor) {
+        console.log(valor);
+      }
+      var array1 = [1, 2, 3, 4];
+      array1.push(9);
+      array1.unshift(0);
+
+      array1.forEach(funcaoUsadaNoForEach);
+      
+/*
+      function funcaoUsadaNoForEach(valor) {
+        console.log(valor);
+      }
+
+      var array1 = [1,2,3,4];
+      array1.push(9);
+      array1.unshift(0);
+
+      for( let i = 0; i < array1.length; i++) {
+        console.log(array1[i]);
+      }
+      console.log("-------------");
+
+      array1.forEach(funcaoUsadaNoForEach);
+*/
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Aula 4 - O forEach</h1>
+  </body>
+</html>
